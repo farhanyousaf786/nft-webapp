@@ -12,7 +12,6 @@ export default function SignUpPage(props) {
     email: "",
     password: "",
     passwordConf: "",
-    bio: "",
   });
 
   function handleChange(e) { 
@@ -61,14 +60,7 @@ export default function SignUpPage(props) {
             onChange={handleChange}
             required
           />
-          <Form.TextArea
-            label="bio"
-            name="bio"
-            placeholder="Tell us more about your dogs..."
-            value={state.bio}
-
-            onChange={handleChange}
-          />
+  
           <Form.Field>
             <Form.Input
               type="file"
