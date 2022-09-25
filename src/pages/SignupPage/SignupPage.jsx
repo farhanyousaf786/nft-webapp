@@ -20,12 +20,18 @@ export default function SignUpPage(props) {
       [e.target.name]: e.target.value,
     });
   }
+  const [file, setFile] = useState("");
+
   function handleFileInput(e) {
+
+    setFile(e.target.files[0]);  
+
   }
 
-  async function handleSubmit(e) {}
+  async function handleSubmit(e) {
+   e.preventDefualt();
+  }
 
-  const [file, setFile] = useState("");
 
   return (
 
