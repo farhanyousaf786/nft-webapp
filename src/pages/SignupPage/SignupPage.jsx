@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 
 export default function SignUpPage(props) {
   const [error, setError] = useState('');
+  const [file, setFile] = useState('');
+
   
   const [state, setState] = useState({
     username: "",
@@ -20,17 +22,36 @@ export default function SignUpPage(props) {
       [e.target.name]: e.target.value,
     });
   }
-  const [file, setFile] = useState("");
 
   function handleFileInput(e) {
-
     setFile(e.target.files[0]);  
-
   }
 
   async function handleSubmit(e) {
-   e.preventDefualt();
+    e.preventDefault(); 
+    const formData = new FormData(); 
+    formData.append("photo", file)
+    for (let key in state) {
+      formData.append(key, state[key]);
+    }
+    console.log(
+      formData,
+    );
+    console.log(
+      formData.forEach((item) => console.log(item)),
+    );
+
+    try {
+      await userService.signup(formData); 
+      
+    } catch (err) {
+      
+      console.log(err);
+      setError({message: err.message, passwordError: false});
+    }
   }
+
+  
 
 
   return (
