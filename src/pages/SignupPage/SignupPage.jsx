@@ -24,6 +24,9 @@ export default function SignUpPage(props) {
   }
 
   async function handleSubmit(e) {}
+
+  const [file, setFile] = useState("");
+
   return (
 
     <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
