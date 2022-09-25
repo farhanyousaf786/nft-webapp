@@ -15,6 +15,10 @@ export default function SignUpPage(props) {
   });
 
   function handleChange(e) { 
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
   }
   function handleFileInput(e) {
   }
