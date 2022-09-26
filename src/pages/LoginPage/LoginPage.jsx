@@ -13,7 +13,9 @@ import {
 } from "semantic-ui-react";
 
 
+
 export default function LoginPage(props) {
+
   const [error, setError] = useState('');
   const [state, setState] = useState({
     email: '',
@@ -23,12 +25,25 @@ export default function LoginPage(props) {
 const navigate = useNavigate();
 
 function handleChange(e) {
- 
+  setState({
+    ...state,
+    [e.target.name]: e.target.value,
+  });
 }
 
 async function handleSubmit(e) {
-  
+  e.preventDefault();
+
+  try {
+    await userService.login(state);
+    props.handleSignUpOrLogin();
+    navigate('/');
+
+  } catch(err) {
+    setError(err.message);
+  }
 }
+
 
 
   return (
@@ -38,7 +53,7 @@ async function handleSubmit(e) {
         verticalAlign="middle"
       >
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h2" color="grey" textAlign="center">
+          <Header as="h2" color="blue" textAlign="center">
            LOG IN HERE
           </Header>
           <Form onSubmit={handleSubmit}>
@@ -71,7 +86,7 @@ async function handleSubmit(e) {
             </Segment>
           </Form>
           <Message>
-            Don't Have an Account? <Link to="/signup">Sign Up Here</Link>
+            Don't have an account? <Link to="/signup">Sign Up Here</Link>
           </Message>
           {error ? <ErrorMessage error={error} /> : null}
         </Grid.Column>
