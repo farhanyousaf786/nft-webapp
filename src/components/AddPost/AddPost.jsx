@@ -10,3 +10,7 @@ return(
 )
 
 }
+
+
+
+export default PostCard;
