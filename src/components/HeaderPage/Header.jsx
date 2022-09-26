@@ -1,17 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Header, Segment, Image, Icon } from "semantic-ui-react";
+import { Header, Segment, Image, Icon, Table } from "semantic-ui-react";
 
 export default function HeaderPage({ loggedUser, handleLogout }) {
   return (
 
-
     <Segment clearing >
-      <Header as="h2" floated="right">
 
-
-       <h3>{loggedUser.username}</h3>
         
+      <Header as="h2" floated="right">
         <Link to={`/${loggedUser?.username}`}>
           
           
@@ -32,7 +29,24 @@ export default function HeaderPage({ loggedUser, handleLogout }) {
         ) : (
           <Link to={`/${loggedUser?.username}`}>Login</Link>
         )}
+        
       </Header>
+
+
+      <Header as="h2" floated="top">
+       
+
+       {loggedUser ? (
+       <>
+      WELCOME:  {loggedUser.username}
+
+       </>
+       ) : (
+       null
+       )}
+     </Header>
+   
+
       <Header as="h2" floated="left">
         <Link to="/">
           <Icon name="home"></Icon>
