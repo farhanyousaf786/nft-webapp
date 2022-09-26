@@ -35,13 +35,6 @@ export default function AddPost(props) {
     formdata.append('chain', state.chain);
 
     formdata.append('price', state.price);
-
-    try {
-        await props.handleAddPost(state);
-        
-    } catch(err) {
-        console.log(err, "<< output of handlesubmit")
-    }
     
   }
 
