@@ -17,13 +17,13 @@ return(
       </Grid.Row>
 
       <Grid.Row>
-        <Grid.Column >
+        <Grid.Column style={{maxWidth: 450}}>
           < AddPost/>
         </Grid.Column>
       </Grid.Row>
 
       <Grid.Row>
-        <Grid.Column >
+        <Grid.Column style={{maxWidth: 450}}>
           <PostGallery />
         </Grid.Column>
       </Grid.Row>
