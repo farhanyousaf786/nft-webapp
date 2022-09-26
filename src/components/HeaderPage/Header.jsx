@@ -4,17 +4,26 @@ import { Header, Segment, Image, Icon } from "semantic-ui-react";
 
 export default function HeaderPage({ loggedUser, handleLogout }) {
   return (
+
+
     <Segment clearing >
       <Header as="h2" floated="right">
+
+
+       <h3>{loggedUser.username}</h3>
+        
         <Link to={`/${loggedUser?.username}`}>
+          
+          
           <Image
             src={
               loggedUser?.photoUrl
                 ? loggedUser?.photoUrl
                 : "https://react.semantic-ui.com/images/wireframe/square-image.png"
             }
-            avatar
-          ></Image>
+            avatar></Image>
+
+
         </Link>
         {loggedUser ? (
           <Link to="" onClick={handleLogout}>
