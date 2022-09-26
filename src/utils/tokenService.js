@@ -37,3 +37,4 @@ function setToken(token) {
     removeToken,
     getUserFromToken
   };
+

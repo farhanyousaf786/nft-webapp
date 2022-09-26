@@ -7,7 +7,6 @@ export default function HeaderPage({ loggedUser, handleLogout }) {
 
     <Segment clearing >
 
-        
       <Header as="h2" floated="right">
         <Link to={`/${loggedUser?.username}`}>
           
@@ -33,7 +32,7 @@ export default function HeaderPage({ loggedUser, handleLogout }) {
       </Header>
 
 
-      <Header as="h2" floated="top">
+      <Header as="h2" >
        
 
        {loggedUser ? (

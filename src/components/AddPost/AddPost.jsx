@@ -26,16 +26,14 @@ export default function AddPost(props) {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const formdata = FormData();
-
+    const formdata = new FormData();
     formdata.append('photo', file);
-
     formdata.append('name', state.name);
-
     formdata.append('chain', state.chain);
-
     formdata.append('price', state.price);
-    
+    console.log("THIS IS HANDLE SUBMIT>>>", formdata);
+
+    props.handleAddPost(formdata); 
   }
 
   return (
