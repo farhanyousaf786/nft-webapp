@@ -4,6 +4,8 @@ import "./App.css";
 import SignupPage from "../SignupPage/SignupPage";
 import LoginPage from "../LoginPage/LoginPage";
 import userService from "../../utils/userService";
+import LogoutPage from "../LogoutPage/LogoutPage";
+
 
 
 function App() {
@@ -28,9 +30,15 @@ function App() {
           path="/login"
           element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
         />
+        
         <Route
           path="/signup"
           element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
+        />
+
+           <Route
+          path="/logout"
+          element={<LogoutPage loggedUser={user} handleLogout={handleLogout} />}
         />
       </Routes>
     );
