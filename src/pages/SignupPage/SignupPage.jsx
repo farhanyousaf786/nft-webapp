@@ -14,7 +14,9 @@ export default function SignUpPage(props) {
     email: "",
     password: "",
     passwordConf: "",
-  });
+  });;
+
+  const navigate = useNavigate()
 
   function handleChange(e) { 
     setState({
@@ -43,19 +45,16 @@ export default function SignUpPage(props) {
 
     try {
       await userService.signup(formData); 
+      navigate('/');
       
     } catch (err) {
-      
-      console.log(err);
-      setError({message: err.message, passwordError: false});
+      console.log("this is the error - - - -  >", err.message);
+      setError(err.message);
     }
   }
 
   
-
-
   return (
-
     <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
     <Grid.Column style={{ maxWidth: 450 }}>
       <Header as="h2" color="teal" textAlign="center">

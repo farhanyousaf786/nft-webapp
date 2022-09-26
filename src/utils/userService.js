@@ -17,6 +17,7 @@ function signup(user) {
     if (res.ok) return res.json();
     // Probably a duplicate email
     
+    throw new Error('Duplicate email address');
     // Writing your error handling like this allows you to throw the error response 
     // to the catch block where signup occurs,  
 
