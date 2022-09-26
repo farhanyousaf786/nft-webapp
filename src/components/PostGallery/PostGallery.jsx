@@ -1,14 +1,17 @@
 import React from "react";
+import { Card  } from 'semantic-ui-react'
+import PostCard from '../PostCard/PostCard';
 
 
-function PostCard(props){
+export default function PostGallery({posts}) {
 
-return(
+  const postCards = posts.map((post) => {
+    return <PostCard post={post} key={post._id} />;
+  })
 
-<div>This is Post Gallery</div>
-
-)
-
+  return (
+    <Card.Group itemsPerRow={1} stackable>
+      {postCards}
+    </Card.Group>
+  );
 }
-
-export default PostCard;

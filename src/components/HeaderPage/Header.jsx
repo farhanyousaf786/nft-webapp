@@ -10,7 +10,6 @@ export default function HeaderPage({ loggedUser, handleLogout }) {
       <Header as="h2" floated="right">
         <Link to={`/${loggedUser?.username}`}>
           
-          
           <Image
             src={
               loggedUser?.photoUrl
@@ -37,7 +36,7 @@ export default function HeaderPage({ loggedUser, handleLogout }) {
 
        {loggedUser ? (
        <>
-      WELCOME:  {loggedUser.username}
+      username =  {loggedUser.username}
 
        </>
        ) : (
@@ -45,6 +44,7 @@ export default function HeaderPage({ loggedUser, handleLogout }) {
        )}
      </Header>
    
+
 
       <Header as="h2" floated="left">
         <Link to="/">
@@ -61,6 +61,13 @@ export default function HeaderPage({ loggedUser, handleLogout }) {
         null
         )}
       </Header>
+
+
+
+
+   
+
+
     </Segment>
   );
 }
