@@ -9,6 +9,8 @@ export default function AddPost(props) {
     price: '',
     chain: '',
   });
+  const [file, setFile] = useState('');
+
 
   function handleChange(e) {
     setState({
@@ -17,8 +19,22 @@ export default function AddPost(props) {
     });
   }
 
+  function handleFileInput(e) {
+    setFile(e.target.files[0]);  
+  }
+
+
   async function handleSubmit(e) {
     e.preventDefault();
+    const formdata = FormData();
+
+    formdata.append('photo', file);
+
+    formdata.append('name', state.name);
+
+    formdata.append('chain', state.chain);
+
+    formdata.append('price', state.price);
 
     try {
         await props.handleAddPost(state);
@@ -40,7 +56,7 @@ export default function AddPost(props) {
           onChange={handleChange}
           required
         />
-        <Form.TextArea
+        <Form.Input
           className="form-control"
           name="price"
           value={state.price}
@@ -48,7 +64,7 @@ export default function AddPost(props) {
           onChange={handleChange}
           required
         />
-         <Form.TextArea
+         <Form.Input
           className="form-control"
           name="chain"
           value={state.chain}
@@ -56,6 +72,14 @@ export default function AddPost(props) {
           onChange={handleChange}
           required
         />
+        <Form.Field>
+        <Form.Input
+              type="file"
+              name="photo"
+              placeholder="upload image"
+              onChange={handleFileInput}
+        />
+        </Form.Field>
         <Button type="submit" className="btn">
           Post NFT
         </Button>
