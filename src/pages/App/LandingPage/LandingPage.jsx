@@ -4,6 +4,8 @@ import PostGallery from "../../../components/PostGallery/PostGallery";
 import AddPost from "../../../components/AddPost/AddPost";
 import * as postApi from "../../../utils/postApi"
 import React, { useState, useEffect } from "react";
+import Loading from "../../../components/Loader/Loader";
+import * as likesAPI from "../../../utils/likesApi";
 
 
 
@@ -12,6 +14,34 @@ export default function LandingPage({ loggedUser, handleLogout }) {
 
     const [posts, setPosts] =useState([]);
 
+    const [loading, setLoading] = useState(true);
+
+    const [error, setError] = useState("");
+
+
+  async function addLike(postId) {
+    try {
+      const response = await likesAPI.create(postId);
+      console.log(response, "from add like");
+      getPosts();
+    } catch (err) {
+      console.log(err, " err from server");
+      setError("error adding like");
+    }
+  }
+  console.log(typeof addLike, "<<----addlike 0");
+
+
+  async function removeLike(likeId) {
+    try {
+      const response = await likesAPI.removeLike(likeId);
+      console.log(response, " remove like");
+      getPosts();
+    } catch (err) {
+      console.log(err);
+      setError("error removing like");
+    }
+  }
     async function handleAddPost(post){
         try {
         
@@ -27,19 +57,19 @@ export default function LandingPage({ loggedUser, handleLogout }) {
 
         }
     }
-    useEffect(() => {
 
-        async function getPosts(){
+    async function getPosts(){
     
-          try {
-            const response = await postApi.getAll();
-            console.log(response, ' data')
-            setPosts([...response.data])
-          } catch(err){
-            console.log(err.message,)
-          }
+        try {
+          const response = await postApi.getAll();
+          console.log(response, ' data')
+          setPosts([...response.data])
+        } catch(err){
+          console.log(err.message,)
         }
-    
+      }
+
+    useEffect(() => {
         getPosts()
       }, []) 
     
@@ -59,7 +89,14 @@ return(
 
       <Grid.Row>
         <Grid.Column style={{maxWidth: 450}}>
-        <PostGallery posts={posts} />
+        <PostGallery
+            posts={posts}
+            numPhotosCol={1}
+            addLike= {addLike}
+            isProfile={false}
+            removeLike={removeLike}
+            loggedUser={loggedUser}
+          />
         </Grid.Column>
       </Grid.Row>
 
