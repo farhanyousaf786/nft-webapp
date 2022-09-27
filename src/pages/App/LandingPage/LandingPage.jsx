@@ -9,7 +9,6 @@ import * as likesAPI from "../../../utils/likesApi";
 
 
 
-
 export default function LandingPage({ loggedUser, handleLogout }) {
 
     const [posts, setPosts] =useState([]);
