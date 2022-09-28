@@ -14,7 +14,7 @@ function PostCard({
     (like) => like.username === loggedUser.username
   );
 
-  const likeColor = likedIndex > -1 ? "green" : "grey";
+  const likeColor = likedIndex > -1 ? "red" : "grey";
   console.log(typeof addLike, "<<----addlike");
   const clickHandler =
     likedIndex > -1
