@@ -1,5 +1,5 @@
 // import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Header, Segment, Image, Icon, Table } from "semantic-ui-react";
 
 // export default function HeaderPage({ loggedUser, handleLogout }) {
@@ -105,10 +105,19 @@ const HeaderPage = ({ loggedUser, handleLogout }) => {
              <h1  style={{
     paddingBottom: '25px', paddingLeft: '10px'  }}>Welcome {loggedUser.username}</h1>
       
-           
-          {/* <NavBtnLink to='/signin'>Sign In</NavBtnLink> */}
-        </NavBtn>
-      </Nav>
+                   </NavBtn>
+                   
+        <NavLink>
+        <h1>
+       {loggedUser ? (
+        <Link to="" onClick={handleLogout}>
+          Logout
+        </Link>
+               ) : (
+        <Link to={`/${loggedUser?.username}`}>Login</Link>
+                   )}</h1>
+        </NavLink>
+        </Nav>
     </>
   );
 };
