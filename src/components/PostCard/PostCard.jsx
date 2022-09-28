@@ -10,16 +10,22 @@ function PostCard({
   addLike,
   removeLike,
   loggedUser,}) {
+
+
+
+
   const likedIndex = post.likes.findIndex(
     (like) => like.username === loggedUser.username
   );
 
-  const likeColor = likedIndex > -1 ? "red" : "grey";
+  const likeColor = likedIndex > -1 ? "green" : "grey";
   console.log(typeof addLike, "<<----addlike");
   const clickHandler =
     likedIndex > -1
+
       ? () => removeLike(post.likes[likedIndex]._id) 
       : () => addLike(post._id);  
+
 
   return (
    <>
@@ -43,7 +49,9 @@ function PostCard({
         <Card.Description>NFT CHAIN: {post.chain}</Card.Description>
        </Card.Content>
       </div>
-      <div class="extra content">
+
+      <tr>
+    <th><div class="extra content">
         <Icon
           name={"angle up"}
           size="large"
@@ -51,7 +59,24 @@ function PostCard({
           onClick={clickHandler}
         />
         {post.likes.length} Likes
+     </div></th>
+
+    <th>
+    <div class="extra content">
+        <Icon
+          name={"angle down"}
+          size="large"
+          color={likeColor}
+          onClick={clickHandler}
+        />
+        {post.likes.length} Likes
      </div>
+    </th>
+  </tr>
+      
+
+   
+
      </div>
      </>
 
