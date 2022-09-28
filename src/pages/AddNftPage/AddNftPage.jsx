@@ -4,8 +4,6 @@ import * as postApi from "../../utils/postApi"
 import { useNavigate } from "react-router-dom";
 
 
-
-
 const AddNftPage = () => {
 
     const navigate = useNavigate();

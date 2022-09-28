@@ -19,13 +19,12 @@ export default function PostGallery({ posts,
         removeLike={removeLike}
         addLike={addLike}
         loggedUser={loggedUser}
-      
       />
     );
   })
 
   return (
-    <Card.Group itemsPerRow={numPhotosCol} stackable>
+    <Card.Group itemsPerRow={3} stackable>
       {postCards}
     </Card.Group>
   );

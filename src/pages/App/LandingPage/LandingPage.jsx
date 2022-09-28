@@ -41,22 +41,7 @@ export default function LandingPage({ loggedUser, handleLogout }) {
       setError("error removing like");
     }
   }
-    async function handleAddPost(post){
-        try {
-        
-          const responsePost = await  postApi.create(post);
-
-          console.log("this is post data: ", responsePost);
-
-          setPosts( ...posts, responsePost.data);
-
-        } catch (err) {
-
-         console.log("this is error message from landing page", err);
-
-        }
-    }
-
+    
     async function getPosts(){
     
         try {
@@ -81,13 +66,8 @@ return(
       </Grid.Row>
 
       <Grid.Row>
-        <Grid.Column style={{maxWidth: 450}}>
-          < AddPost handleAddPost={handleAddPost}/>
-        </Grid.Column>
-      </Grid.Row>
+        <Grid.Column style={{maxWidth: 1000}}>
 
-      <Grid.Row>
-        <Grid.Column style={{maxWidth: 450}}>
         <PostGallery
             posts={posts}
             numPhotosCol={1}
