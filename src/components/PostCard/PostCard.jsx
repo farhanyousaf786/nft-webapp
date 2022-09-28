@@ -9,6 +9,8 @@ function PostCard({
   isProfile,
   addLike,
   removeLike,
+  addunLike,
+  removeunLike,
   loggedUser,}) {
 
 
@@ -18,13 +20,26 @@ function PostCard({
     (like) => like.username === loggedUser.username
   );
 
+  const unlikedIndex = post.unlikes.findIndex(
+    (unlikes) => unlikes.username === loggedUser.username
+  );
   const likeColor = likedIndex > -1 ? "green" : "grey";
   console.log(typeof addLike, "<<----addlike");
-  const clickHandler =
-    likedIndex > -1
 
+  const unlikeColor = unlikedIndex > -1 ? "red" : "grey";
+  console.log(typeof addunLike, "<<----addlike");
+
+
+  const clickHandlerForLike =
+    likedIndex > -1
       ? () => removeLike(post.likes[likedIndex]._id) 
       : () => addLike(post._id);  
+
+
+  const clickHandlerForunLike = 
+  unlikedIndex > -1
+  ? () => removeunLike(post.unlikes[unlikedIndex]._id) 
+  : () => addunLike(post._id);  
 
 
   return (
@@ -56,7 +71,7 @@ function PostCard({
           name={"angle up"}
           size="large"
           color={likeColor}
-          onClick={clickHandler}
+          onClick={clickHandlerForLike}
         />
         {post.likes.length} Likes
      </div></th>
@@ -66,10 +81,10 @@ function PostCard({
         <Icon
           name={"angle down"}
           size="large"
-          color={likeColor}
-          onClick={clickHandler}
+          color={unlikeColor}
+          onClick={clickHandlerForunLike}
         />
-        {post.likes.length} Likes
+        {post.unlikes.length} down
      </div>
     </th>
   </tr>

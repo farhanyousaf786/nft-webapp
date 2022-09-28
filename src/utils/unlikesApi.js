@@ -3,8 +3,10 @@ import tokenService from "./tokenService";
 
 const BASE_URL = "/api/";
 
-export function create(postId) {
-  return fetch(`${BASE_URL}posts/${postId}/likes`, {
+
+
+export function createunLike(postId) {
+  return fetch(`${BASE_URL}posts/${postId}/unlikes`, {
     method: "POST",
     headers: {
       Authorization: "Bearer " + tokenService.getToken(), 
@@ -15,8 +17,8 @@ export function create(postId) {
   });
 }
 
-export function removeLike(likeId) {
-  return fetch(`${BASE_URL}likes/${likeId}`, {
+export function removeunLike(unlikeId) {
+  return fetch(`${BASE_URL}unlikes/${unlikeId}`, {
     method: "DELETE",
     headers: {
       Authorization: "Bearer " + tokenService.getToken(), 
@@ -26,5 +28,3 @@ export function removeLike(likeId) {
     throw new Error(res.error);
   });
 }
-
-

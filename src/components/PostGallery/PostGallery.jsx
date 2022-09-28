@@ -8,6 +8,8 @@ export default function PostGallery({ posts,
   isProfile,
   removeLike,
   addLike,
+  addunLike,
+  removeunLike,
   loggedUser,}) {
 
   const postCards = posts.map((post) => {
@@ -19,6 +21,8 @@ export default function PostGallery({ posts,
         removeLike={removeLike}
         addLike={addLike}
         loggedUser={loggedUser}
+        addunLike={addunLike}
+       removeunLike={removeunLike}
       />
     );
   })
