@@ -12,7 +12,7 @@ export default function PostGallery({ posts,
   removeunLike,
   loggedUser,}) {
 
-  const postCards = posts.map((post) => {
+  const postCards = posts.reverse().map((post) => {
     return (
       <PostCard
         post={post}

@@ -73,7 +73,7 @@ function PostCard({
           color={likeColor}
           onClick={clickHandlerForLike}
         />
-        {post.likes.length} Likes
+        {post.likes.length} upVote
      </div></th>
 
     <th>
@@ -84,7 +84,7 @@ function PostCard({
           color={unlikeColor}
           onClick={clickHandlerForunLike}
         />
-        {post.unlikes.length} down
+        {post.unlikes.length} downVote
      </div>
     </th>
   </tr>
