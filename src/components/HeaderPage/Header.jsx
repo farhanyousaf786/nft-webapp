@@ -1,6 +1,6 @@
 // import React from "react";
 // import { Link } from "react-router-dom";
-// import { Header, Segment, Image, Icon, Table } from "semantic-ui-react";
+import { Header, Segment, Image, Icon, Table } from "semantic-ui-react";
 
 // export default function HeaderPage({ loggedUser, handleLogout }) {
 //   return (
@@ -63,11 +63,6 @@
 //       </Header>
 
 
-
-
-   
-
-
 //     </Segment>
 //   );
 // }
@@ -83,31 +78,35 @@ import {
   NavBtnLink
 } from './HeaderElements';
 
-const HeaderPage = () => {
+const HeaderPage = ({ loggedUser, handleLogout }) => {
   return (
     <>
       <Nav>
         <NavLink to='/'>
           <h1>Home</h1>
         </NavLink>
-        <Bars />
         <NavMenu>
           <NavLink to='/about' activeStyle>
-            About
-          </NavLink>
-          <NavLink to='/services' activeStyle>
-            Services
-          </NavLink>
-          <NavLink to='/contact-us' activeStyle>
-            Contact Us
+          <h1>Add Nft</h1>
           </NavLink>
           <NavLink to='/login' activeStyle>
-            Sign Up
+          <h1>About Us</h1>
           </NavLink>
-         
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+          <Image
+            src={
+              loggedUser?.photoUrl
+                ? loggedUser?.photoUrl
+                : "https://react.semantic-ui.com/images/wireframe/square-image.png"
+            }
+            avatar></Image>
+            
+             <h1  style={{
+    paddingBottom: '25px', paddingLeft: '10px'  }}>Welcome {loggedUser.username}</h1>
+      
+           
+          {/* <NavBtnLink to='/signin'>Sign In</NavBtnLink> */}
         </NavBtn>
       </Nav>
     </>
