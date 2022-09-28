@@ -6,6 +6,7 @@ import LoginPage from "../LoginPage/LoginPage";
 import userService from "../../utils/userService";
 import LogoutPage from "../LogoutPage/LogoutPage";
 import LandingPage from "./LandingPage/LandingPage";
+import AddNftPage from "../AddNftPage/AddNftPage";
 
 
 
@@ -41,6 +42,11 @@ function App() {
            <Route
           path="/logout"
           element={<LogoutPage loggedUser={user} handleLogout={handleLogout} />}
+        />
+
+        <Route
+          path="/addNft"
+          element={<AddNftPage />}
         />
       </Routes>
     );

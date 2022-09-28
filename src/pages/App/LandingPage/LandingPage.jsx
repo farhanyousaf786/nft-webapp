@@ -1,7 +1,7 @@
 import { Grid } from "semantic-ui-react";
 import HeaderPage from "../../../components/HeaderPage/Header";
 import PostGallery from "../../../components/PostGallery/PostGallery";
-import AddPost from "../../../components/AddPost/AddPost";
+import AddPost from "../../../components/AddNft/AddNft";
 import * as postApi from "../../../utils/postApi"
 import React, { useState, useEffect } from "react";
 import Loading from "../../../components/Loader/Loader";

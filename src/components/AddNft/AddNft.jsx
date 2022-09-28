@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Form, Segment } from "semantic-ui-react";
 
 
-export default function AddPost(props) {
+export default function AddNft(props) {
 
   const [state, setState] = useState({
     name: '',
@@ -32,7 +32,6 @@ export default function AddPost(props) {
     formdata.append('chain', state.chain);
     formdata.append('price', state.price);
     console.log("THIS IS HANDLE SUBMIT>>>", formdata);
-
     props.handleAddPost(formdata); 
   }
 
