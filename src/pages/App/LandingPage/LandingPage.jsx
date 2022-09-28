@@ -6,6 +6,8 @@ import * as postApi from "../../../utils/postApi"
 import React, { useState, useEffect } from "react";
 import Loading from "../../../components/Loader/Loader";
 import * as likesAPI from "../../../utils/likesApi";
+import * as unlikesAPI from "../../../utils/unlikesApi";
+
 
 
 
@@ -41,6 +43,41 @@ export default function LandingPage({ loggedUser, handleLogout }) {
       setError("error removing like");
     }
   }
+
+
+
+
+
+  async function addunLike(postId) {
+    try {
+      const response = await unlikesAPI.createunLike(postId);
+      console.log(response, "from add like");
+      getPosts();
+    } catch (err) {
+      console.log(err, " err from server");
+      setError("error adding like");
+    }
+  }
+  console.log(typeof addLike, "<<----addlike 0");
+
+
+
+  async function removeunLike(likeId) {
+    try {
+      const response = await unlikesAPI.removeunLike(likeId);
+      console.log(response, " remove like");
+      getPosts();
+    } catch (err) {
+      console.log(err);
+      setError("error removing like");
+    }
+  }
+
+
+
+
+
+
     
     async function getPosts(){
     
@@ -75,6 +112,8 @@ return(
             isProfile={false}
             removeLike={removeLike}
             loggedUser={loggedUser}
+            addunLike={addunLike}
+            removeunLike={removeunLike}
           />
         </Grid.Column>
       </Grid.Row>
