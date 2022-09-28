@@ -1,12 +1,14 @@
 import React from 'react';
 import AddNft from "../../components/AddNft/AddNft"
 import * as postApi from "../../utils/postApi"
+import { useNavigate } from "react-router-dom";
 
 
 
 
 const AddNftPage = () => {
 
+    const navigate = useNavigate();
 
     async function handleAddPost(post){
 
@@ -17,6 +19,7 @@ const AddNftPage = () => {
 
           console.log("this is post data: ", responsePost);
 
+          navigate('/');
 
         } catch (err) {
 
