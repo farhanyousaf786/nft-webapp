@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
-
+import { Link } from "react-router-dom";
 
 
 
@@ -12,8 +12,6 @@ function PostCard({
   addunLike,
   removeunLike,
   loggedUser,}) {
-
-
 
 
   const likedIndex = post.likes.findIndex(
@@ -44,8 +42,9 @@ function PostCard({
 
   return (
    <>
-   <div class="ui card" style={{height: 400}}>
-   <div class="image">
+     
+   <div class="ui card" style={{height: 400, }}>
+   <div style={{padding: 10, }} class="image">
       <Image
           floated="left"
           avatar
@@ -55,6 +54,13 @@ function PostCard({
               : "https://react.semantic-ui.com/images/wireframe/square-image.png"
           }
         />
+      <Card.Header 
+      
+      style={{
+        padding: 1
+
+      }} 
+      floated="right">{post.user.username}</Card.Header>
       <Image style={{height: 200}}  src={`${post?.photoUrl}`}/>
       </div>
       <div class="content">
@@ -66,14 +72,14 @@ function PostCard({
       </div>
 
       <tr>
-    <th><div class="extra content">
+    <th><div style={{padding: 10, }} class="extra content">
         <Icon
           name={"angle up"}
           size="large"
           color={likeColor}
           onClick={clickHandlerForLike}
         />
-        {post.likes.length} upVote
+        {post.likes.length}
      </div></th>
 
     <th>
@@ -84,14 +90,21 @@ function PostCard({
           color={unlikeColor}
           onClick={clickHandlerForunLike}
         />
-        {post.unlikes.length} downVote
+        {post.unlikes.length}
      </div>
     </th>
+
+
+    <th>
+     
+    <Link style={{paddingLeft: 150, }} to={`/${loggedUser?.username}`}>Detail</Link>
+    </th>
+
+
   </tr>
       
-
-   
-
+ 
+  
      </div>
      </>
 

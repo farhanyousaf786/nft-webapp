@@ -48,6 +48,12 @@ function App() {
           path="/addNft"
           element={<AddNftPage />}
         />
+
+
+         <Route
+          path="/nftdetail"
+          element={<AddNftPage />}
+        />
       </Routes>
     );
   }
