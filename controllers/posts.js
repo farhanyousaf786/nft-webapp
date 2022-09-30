@@ -8,6 +8,7 @@ const BUCKET_NAME = process.env.AWS_BUCKET_NAME;
 module.exports = {
   create,
   index,
+  detail,
 };
 
 function create(req, res) {
@@ -41,5 +42,22 @@ async function index(req, res) {
       res.status(200).json({ data: posts });
     } catch (err) {
       res.status(400).json({ err });
+    }
+  }
+
+  async function detail(req, res) {
+
+
+    try {
+
+      console.log("id is here->>>>",req.params.id);
+
+      // const posts = await Post.findById(req.params.id);
+      // res.status(200).json({ data: posts });
+
+    } catch (err) {
+
+      res.status(400).json({ err });
+
     }
   }
