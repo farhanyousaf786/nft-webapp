@@ -93,18 +93,11 @@ function PostCard({
         {post.unlikes.length}
      </div>
     </th>
-
-
     <th>
      
-    <Link style={{paddingLeft: 150, }} to={`/${loggedUser?.username}`}>Detail</Link>
+    <Link style={{paddingLeft: 150, }} to={`/${post._id}`}>Detail</Link>
     </th>
-
-
   </tr>
-      
- 
-  
      </div>
      </>
 

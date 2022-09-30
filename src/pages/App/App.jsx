@@ -7,6 +7,8 @@ import userService from "../../utils/userService";
 import LogoutPage from "../LogoutPage/LogoutPage";
 import LandingPage from "./LandingPage/LandingPage";
 import AddNftPage from "../AddNftPage/AddNftPage";
+import PostDetail from "../PostDetail/PostDetail";
+
 
 
 
@@ -51,8 +53,8 @@ function App() {
 
 
          <Route
-          path="/nftdetail"
-          element={<AddNftPage />}
+          path="/:id"
+          element={<PostDetail />}
         />
       </Routes>
     );

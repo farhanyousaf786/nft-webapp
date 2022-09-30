@@ -13,6 +13,8 @@ import * as unlikesAPI from "../../../utils/unlikesApi";
 
 export default function LandingPage({ loggedUser, handleLogout }) {
 
+    console.log(">>>this is landing page..");
+
     const [posts, setPosts] =useState([]);
 
     const [loading, setLoading] = useState(true);
