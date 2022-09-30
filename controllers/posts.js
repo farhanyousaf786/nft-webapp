@@ -12,13 +12,12 @@ module.exports = {
 };
 
 function create(req, res) {
-  console.log(req.body, req.file, req.user); 
   const key = `nftcollection/posts/${uuidv4()}-${req.file.originalname}`;
   const params = { Bucket: BUCKET_NAME, Key: key, Body: req.file.buffer };
 
   s3.upload(params, async function (err, data) {
     console.log("=======================");
-    console.log(err, " err from aws");
+    console.log(err, " err from aws..");
     console.log("=======================");
     if (err) return res.status(400).json({ err: "Check Terminal error with AWS" });
     try {
@@ -45,19 +44,25 @@ async function index(req, res) {
     }
   }
 
-  async function detail(req, res) {
 
+  async function detail(req, res) {
+    console.log("req.params.id in controller/posts/detail ", req.params.id); 
 
     try {
+      const post = await Post.findOne({ id: req.params.id });
+      if (!post){
 
-      console.log("id is here->>>>",req.params.id);
+        console.log(" error in details in constroler");
+      }
 
-      // const posts = await Post.findById(req.params.id);
-      // res.status(200).json({ data: posts });
-
+      if (!post) return res.status(404).json({ error: "Post not found" });
+        res.status(200).json({
+        data: {
+          post: post,
+        }
+      });
     } catch (err) {
-
-      res.status(400).json({ err });
-
+      console.log(err.message, " <- Post controller");
+      res.status(400).json({ error: "Something went wrong" });
     }
   }
