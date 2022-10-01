@@ -7,6 +7,8 @@ import React, { useState, useEffect } from "react";
 import Loading from "../../../components/Loader/Loader";
 import * as likesAPI from "../../../utils/likesApi";
 import * as unlikesAPI from "../../../utils/unlikesApi";
+import './LandingPage.css'; 
+
 
 
 

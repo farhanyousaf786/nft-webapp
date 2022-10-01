@@ -3,19 +3,22 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import './IntroPage.css'; 
 
-
-
 export default function IntroPage() {
 
 
     const navigate = useNavigate()
 
-  async function handleSubmit(e) {
+  async function handlSignIn(e) {
    
       navigate('/login');
-      
     
   }
+
+  async function handleSignUp(e) {
+   
+    navigate('/signup');
+  
+}
 
   return (
 
@@ -23,28 +26,22 @@ export default function IntroPage() {
      <>
 
      <center>
-     <body>
-     <div class="container">
+     <body >
 
-       
+        
+     <div class="containerintro">
 
         <h1>Welcome To NFT Market :)</h1>
         <h2>Nfts are the future on collections</h2>
 
-       
-
-        <p>
-
-
-      
-
-      <div onClick={handleSubmit} class="btn_container">
-        <a class="btn1"><span class="btn1span"><button class="btn2">Hello</button></span></a>
+        <div onClick={handlSignIn} class="btn_containerintro">
+        <a class="btn1intro"><span class="btn1span">Sign In</span></a>
         </div>
-      
     
-        </p>
-              
+      <div onClick={handleSignUp} class="btn_containerintro">
+        <a class="btn1intro"><span class="btn1span">Sign Up</span></a>
+        </div>
+
     </div>
 
 </body>

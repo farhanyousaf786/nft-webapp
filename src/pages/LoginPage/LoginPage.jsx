@@ -44,12 +44,16 @@ async function handleSubmit(e) {
   }
 }
 
-
-
   return (
-    <Grid
+
+
+    <body
+
+
+class="loginbody"
+    >
+        <Grid
         textAlign="center"
-        style={{ height: "100vh", width: "100vw" }}
         verticalAlign="middle"
       >
         <Grid.Column style={{ maxWidth: 450 }}>
@@ -91,5 +95,13 @@ async function handleSubmit(e) {
           {error ? <ErrorMessage error={error} /> : null}
         </Grid.Column>
       </Grid>
+
+    </body>
+
+
+
+  
+       
+
   );
 }
