@@ -46,10 +46,15 @@ async function index(req, res) {
 
 
   async function detail(req, res) {
-    console.log("req.params.id in controller/posts/detail ", req.params.id); 
+    console.log("details id --> ", req.params.id); 
 
     try {
-      const post = await Post.findOne({ id: req.params.id });
+      // const post = await Post.findOne({ id: req.params.id });
+      const post = await Post.find({ _id: req.params.id }).populate("_id").exec();
+
+      console.log("details post 0--> ", post); 
+
+
       if (!post){
 
         console.log(" error in details in constroler");
