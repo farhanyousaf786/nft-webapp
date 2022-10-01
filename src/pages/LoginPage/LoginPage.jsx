@@ -47,19 +47,19 @@ async function handleSubmit(e) {
   return (
 
 
-    <body
+    <body class="loginbody">
 
 
-class="loginbody"
-    >
-        <Grid
-        textAlign="center"
-        verticalAlign="middle"
-      >
-        <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h2" color="blue" textAlign="center">
-           LOG IN HERE
+<div class="logincontainer">
+
+<Grid textAlign="center" verticalAlign="middle">
+
+        {/* <Grid.Column style={{ maxWidth: 450, color: "red" }}>
+          <Header style={{ maxWidth: 450, }}>
+          <h1 class="loginheader"> Login, Please!</h1>
           </Header>
+
+          
           <Form onSubmit={handleSubmit}>
             <Segment stacked>
               <Form.Input
@@ -93,8 +93,68 @@ class="loginbody"
             Don't have an account? <Link to="/signup">Sign Up Here</Link>
           </Message>
           {error ? <ErrorMessage error={error} /> : null}
-        </Grid.Column>
+        </Grid.Column> */}
+
+
+<>
+
+<div class="login-box">
+  <h2>Login!</h2>
+  <form  onSubmit={handleSubmit}>
+    <div class="user-box">
+      <input 
+         type="email"
+         name="email"
+         value={state.email}
+         onChange={handleChange}
+         required
+      
+      />
+      <label>Email</label>
+    </div>
+    <div class="user-box">
+      <input
+      
+      name="password"
+      type="password"
+      value={state.password}
+      onChange={handleChange}
+      required      
+      
+      />
+      <label>Password</label>
+    </div>
+   
+
+
+
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <Button
+                color="black"
+                fluid
+                size="large"
+                type="submit"
+                className="btn"
+              >
+                Login
+              </Button>
+      
+    </a>
+  </form>
+</div>
+</>
+
+
+
       </Grid>
+
+</div>
+
+
 
     </body>
 

@@ -10,17 +10,19 @@ body{
   background-color: rgb(46, 35, 35) ;
   color: #a6a6a6;
   background-image: url('https://imgur.com/pZEsll0.gif');
-  background-repeat: no-repeat, repeat;
-  background-size: cover; /* Resize the background image to cover the entire container */
-
-
+  background-repeat: no-repeat;
+  background-size: cover; 
 
 }
 
+
 .containerintro {
   padding-top: 2rem;
-  position: relative;
   top: 2rem;
+  background-color: rgba(24, 48, 168, 0.484);
+  height: 100%;
+  
+  
 }
 a{
   text-decoration: none;
