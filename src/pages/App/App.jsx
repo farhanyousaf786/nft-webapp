@@ -8,6 +8,8 @@ import LogoutPage from "../LogoutPage/LogoutPage";
 import LandingPage from "./LandingPage/LandingPage";
 import AddNftPage from "../AddNftPage/AddNftPage";
 import PostDetail from "../PostDetail/PostDetail";
+import Intro from "../IntroPage/IntroPage";
+
 
 
 
@@ -66,11 +68,16 @@ function App() {
         path="/login"
         element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
       />
+    <Route
+        path="/intro"
+        element={<Intro handleSignUpOrLogin={handleSignUpOrLogin} />}
+      />
+
       <Route
         path="/signup"
         element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
       />
-      <Route path="/*" element={<Navigate to="/login"/>}/>
+      <Route path="/*" element={<Navigate to="/intro"/>}/>
     </Routes>
   );
 }
