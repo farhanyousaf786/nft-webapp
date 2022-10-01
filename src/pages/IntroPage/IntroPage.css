@@ -22,7 +22,6 @@ body{
   background-color: rgba(0, 18, 106, 0.687);
   height: 100%;
   
-  
 }
 a{
   text-decoration: none;
@@ -84,7 +83,7 @@ a{
   from { border-color: transparent }
   to { border-color: transparent ;
         opacity: 0; }
-  50% { border-color: white; }
+  50% { border-color: rgb(0, 56, 211); }
 }
 
 
@@ -110,8 +109,8 @@ a{
 
 
 .btn1intro {
-    background: rgb(238, 174, 202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%,
+    background: rgb(2, 21, 119);
+    background: radial-gradient(circle, rgb(7, 16, 103) 0%,
     rgba(148,187,233,1) 100%);
     border-radius: 20px;
     box-sizing: border-box;

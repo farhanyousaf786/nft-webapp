@@ -56,8 +56,83 @@ export default function SignUpPage(props) {
 
   
   return (
-    <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
-    <Grid.Column style={{ maxWidth: 450 }}>
+    
+  <body class="loginbody">
+  <div class="logincontainer">
+  <Grid textAlign="center" verticalAlign="middle">
+  <>
+  <div class="login-box">
+  <h2>Login!</h2>
+  <form  onSubmit={handleSubmit}>
+  <div class="user-box">
+  <input 
+      name="username"
+      value={state.username}
+      onChange={handleChange}
+      required/>
+      <label>username</label>
+  </div>
+  <div class="user-box">
+  <input 
+      type="email"
+      name="email"
+      value={state.email}
+      onChange={handleChange}
+      required/>
+      <label>Email</label>
+  </div>
+  <div class="user-box">
+  <input
+      name="password"
+      type="password"
+      value={state.password}
+      onChange={handleChange}
+      required/>
+      <label>Password</label>
+  </div>
+  <div class="user-box">
+  <input
+      name="passwordConf"
+      type="password"
+      value={state.passwordConf}
+      onChange={handleChange}
+      required/>
+      <label>confirm password</label>
+  </div>
+  <div class="user-box">
+  <input
+      type="file"
+      name="photo"
+      placeholder="upload image"
+      onChange={handleFileInput}/>
+      <label>Select Image</label>
+  </div>
+  <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+  <Button
+      color="black"  fluid
+      size="large" type="submit"
+      className="btn"> Sign Up
+  </Button>
+  </a>
+  </form> </div>
+  </></Grid>
+  </div></body>
+
+
+  );
+}
+
+
+
+ // <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
+
+
+
+    {/* <Grid.Column style={{ maxWidth: 450 }}>
       <Header as="h2" color="teal" textAlign="center">
          Sign Up Page
       </Header>
@@ -109,8 +184,9 @@ export default function SignUpPage(props) {
         </Segment>
         {error ? <ErrorMessage error={error} /> : null}
       </Form>
-    </Grid.Column>
-  </Grid>
+    </Grid.Column> */}
 
-  );
-}
+
+
+
+  // </Grid>
