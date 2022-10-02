@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 .detailbody{
     
@@ -17,4 +19,13 @@
   height: 200%;
   flex: autofill;
   
+}
+
+.nametag{
+
+color: blue;
+font-size: 18px;
+font-family: montserrat;
+
+
 }
