@@ -5,17 +5,17 @@ Intro (Coming Soon)
 
 ## Screen Shoots will be here!
 
-### Login Page
-![1st Screen](https://imgur.com/eS4a1cq.gif)
+### Landing Screen
+![1st Screen](https://imgur.com/QMeXx3x.png)
 
-### Landing Page
-![1st Screen](https://imgur.com/eS4a1cq.gif)
+### Login Screen
+![1st Screen](https://imgur.com/OdQ0CYh.png)
 
-### Details Page
-![1st Screen](https://imgur.com/eS4a1cq.gif)
+### SignUp Screen
+![1st Screen](https://imgur.com/SV1vmLk.png)
 
-### Add Device Page
-![1st Screen](https://imgur.com/eS4a1cq.gif)
+### Detail Screen
+![1st Screen](https://imgur.com/dBRjXy6.png)
 
 
 ### Launch Here
