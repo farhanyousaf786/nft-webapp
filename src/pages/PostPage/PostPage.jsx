@@ -21,7 +21,7 @@ import * as postApi from "../../../utils/postApi"
 
         } catch (err) {
 
-         console.log("this is error message from landing page", err);
+         console.log("this is error message from landing page..", err);
 
         }
     }
