@@ -42,7 +42,7 @@ export default function AddNft(props) {
           className="form-control"
           name="name"
           value={state.name}
-          placeholder="Sad Ape"
+          placeholder="Sad Apes"
           onChange={handleChange}
           required
         />
