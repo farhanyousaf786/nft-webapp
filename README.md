@@ -1,6 +1,7 @@
 # Nft Market
 
-Intro (Coming Soon)
+This web app is to represent your nfts. You can upload you nfts in gif or in simple image. In this web app 
+you can post, delete like and dislike the nfts. You have to signup to use this app.
 
 
 ## Screen Shoots will be here!
@@ -47,6 +48,6 @@ Intro (Coming Soon)
 
 ## Special Thanks
 
-* Jason 
+* Jason (Helped me in heroku - save my day)
 * G.A Mentors who help me out throughout the project.
 
