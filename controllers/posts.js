@@ -9,6 +9,8 @@ module.exports = {
   create,
   index,
   detail,
+  deletePost,
+
 };
 
 function create(req, res) {
@@ -69,5 +71,21 @@ async function index(req, res) {
     } catch (err) {
       console.log(err.message, " <- Post controller");
       res.status(400).json({ error: "Something went wrong" });
+    }
+  }
+
+
+
+
+  async function deletePost(req, res) {
+
+
+    console.log("deletePost controller -- >", req.params.id);
+    try {
+      await Post.findByIdAndDelete(req.params.id);
+      res.status(201).json({});
+    } catch (err) {
+      console.log(err, "<<-Error in deletePost controller");
+      res.status(400).json({ err });
     }
   }

@@ -1,10 +1,28 @@
 import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 import "./PostDetails.css"
+import * as removePost from "../../utils/postdetail";
+import { useNavigate } from "react-router-dom";
+
 
 
 
 export default function Deatil({post}) {
+  const navigate = useNavigate()
+
+
+async function clickHandlerForunLike(e){
+
+
+  try {
+  const response = await removePost.removePost(e._id);
+  console.log(response, " remove post");
+  navigate('/');
+   } catch (err) {
+  console.log(err);
+   }
+
+   }
 
   return (
      <body class="detailbody">
@@ -72,6 +90,14 @@ export default function Deatil({post}) {
      </td>
      </tr>
 
+
+     <div class="extra content">
+        Delete-<Icon
+          name={"remove"}
+          size="large"
+          onClick={() => clickHandlerForunLike(p)}
+        />
+     </div>
      </div></div>
      </div>);})}
      </div>
