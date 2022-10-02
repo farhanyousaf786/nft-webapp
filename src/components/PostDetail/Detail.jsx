@@ -24,6 +24,13 @@ async function clickHandlerForunLike(e){
 
    }
 
+   function backFunction(){
+
+    navigate('/');
+
+
+   }
+
   return (
      <body class="detailbody">
      <div class="detailcontainer">
@@ -46,58 +53,54 @@ async function clickHandlerForunLike(e){
      </div>
 
 
-     <tr>
-     <td> <tr>
-     <td class="nametag">NFT Price:&emsp;</td>
-     <td>
-     <h2 class= "nametag">{p.price}</h2>
-     </td>
-     </tr>
-     </td>
-
-    <td>---</td>
-
-     <td>
-     <tr>
-     <td class="nametag">NFT Chain:&emsp;</td>
-     <td>
-     <h2 class= "nametag">{p.chain}</h2>
-     </td>
-     </tr>
-     </td>
-     </tr>
+    
     
 
-  
-     <tr>
-     <td> <tr>
-     <td class="nametag">Likes:&emsp;</td>
-     <td>
-     <h2 class= "nametag">{p.likes.length}</h2>
-     </td>
-     </tr>
-     </td>
 
-    <td>---</td>
+     <table id="nftdetails">
+  <tr>
+    <th>NFT NAME</th>
+    <th>NFT PRICE</th>
+    <th>NFT CHAIN</th>
+    <th>NFT LIKES</th>
+    <th>NFT DISLIKES</th>
 
-     <td>
-     <tr>
-     <td class="nametag">Dislike:&emsp;</td>
-     <td>
-     <h2 class= "nametag">{p.unlikes.length}</h2>
-     </td>
-     </tr>
-     </td>
-     </tr>
+  </tr>
+  <tr>
+    <td>{p.name}</td>
+    <td>{p.price}</td>
+    <td>{p.chain}</td>
+    <td>{p.likes.length}</td>
+    <td>{p.unlikes.length}</td>
+
+  </tr>
+
+</table>
 
 
+
+<button class="detaildeletebutton1">
      <div class="extra content">
-        Delete-<Icon
+        <Icon
+          name={"angle double left"}
+          size="large"
+          onClick={() => backFunction(p)}
+        />Back
+     </div></button>
+
+
+
+     <button class="detaildeletebutton2">
+     <div class="extra content">
+        Delete<Icon
           name={"remove"}
           size="large"
           onClick={() => clickHandlerForunLike(p)}
         />
-     </div>
+     </div></button>
+
+
+
      </div></div>
      </div>);})}
      </div>
