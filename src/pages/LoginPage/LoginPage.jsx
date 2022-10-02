@@ -84,7 +84,9 @@ async function handleSubmit(e) {
   </a>
   </form> </div>
   </></Grid>
+  {error ? <ErrorMessage error={error} /> : null}
+
   </div></body>
   );
-  
+
 }

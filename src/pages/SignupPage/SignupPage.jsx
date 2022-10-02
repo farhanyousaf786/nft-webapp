@@ -121,9 +121,10 @@ export default function SignUpPage(props) {
   </Button>
   </a>
   </form> </div>
+  {error ? <ErrorMessage error={error} /> : null}
+
   </></Grid>
   </div></body>
-
 
   );
 }
