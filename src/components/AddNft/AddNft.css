@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+
+
+
+  .addpagecontainer {
+    background-color: rgba(0, 53, 228, 0.852);
+    height: 1000;
+    width: 50%;
+    padding: 30px;
+  }
+
+  .addpostpage{
+
+
+  margin: 0px;
+  padding: 100px;
+
+  }

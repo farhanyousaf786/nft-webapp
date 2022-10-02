@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, Segment } from "semantic-ui-react";
+import "./AddNft.css"
 
 
 export default function AddNft(props) {
@@ -36,8 +37,14 @@ export default function AddNft(props) {
   }
 
   return (
-    <Segment>
-      <Form onSubmit={handleSubmit}>
+    <center className="addpostpage" style={{padding: 30, }} >
+
+
+
+    <div className="addpagecontainer">
+        <center style={{padding: 20}}><h1>Add Post</h1></center>
+
+        <Form onSubmit={handleSubmit}>
         <Form.Input
           className="form-control"
           name="name"
@@ -74,6 +81,10 @@ export default function AddNft(props) {
           Post NFT
         </Button>
       </Form>
-    </Segment>
+
+   
+    </div>
+
+</center>
   );
 }
