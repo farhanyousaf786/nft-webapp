@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 
-.loginbody{
+.signupbody{
     
     background-color: rgb(247, 247, 247) ;
     font-family: 'Roboto Mono', monospace;
@@ -9,22 +9,23 @@
     height: 1000px;
     text-align: center;
     /* background-image: url('https://imgur.com/LOpjccL.gif'); */
-    background-image: url('https://imgur.com/ppcJglz.gif');
+    /* background-image: url('https://imgur.com/ppcJglz.gif'); */
+    background-image: url('https://imgur.com/eS4a1cq.gif');
     background-repeat: no-repeat, repeat;
     background-size: cover; 
 
   }
 
-  .logincontainer {
+  .signupcontainer {
     padding-top: 5rem;
     top: 2rem;
-    background-color: rgba(0, 0, 139, 0.59);
+    background-color: rgba(0, 0, 164, 0.687);
     height: 100%;
     
     
   }
 
-  .loginheader{
+  .signupheader{
     font-size: 30px;
     font-family: 'Roboto Mono', monospace;
     color: rgb(98, 255, 0);
@@ -33,25 +34,13 @@
 
 
 
-
-
-
-  html {
-    height: 100%;
-  }
-  body {
-    margin:0;
-    padding:0;
-    font-family: sans-serif;
-    background: linear-gradient(#141e30, #243b55);
-  }
   
   .login-box {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 400px;
-    padding: 40px;
+    width: 500px;
+    padding: 50px;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
     box-sizing: border-box;

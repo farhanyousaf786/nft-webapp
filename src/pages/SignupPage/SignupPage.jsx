@@ -3,6 +3,8 @@ import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import { Button, Form, Grid, Header, Image, Segment } from 'semantic-ui-react'
 import userService from "../../utils/userService";
 import { useNavigate } from "react-router-dom";
+import "./SignupPage.css";
+
 
 export default function SignUpPage(props) {
   const [error, setError] = useState('');
@@ -57,12 +59,12 @@ export default function SignUpPage(props) {
   
   return (
     
-  <body class="loginbody">
-  <div class="logincontainer">
+  <body class="signupbody">
+  <div class="signupcontainer">
   <Grid textAlign="center" verticalAlign="middle">
   <>
   <div class="login-box">
-  <h2>Login!</h2>
+  <h2>Signup!</h2>
   <form  onSubmit={handleSubmit}>
   <div class="user-box">
   <input 
