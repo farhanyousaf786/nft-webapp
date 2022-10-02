@@ -32,7 +32,7 @@ export default function PostGallery({ posts,
 
     <body class="gallerybody">
 
-    <Card.Group itemsPerRow={3} stackable>
+    <Card.Group itemsPerRow={4} stackable>
       {postCards}
     </Card.Group>
       

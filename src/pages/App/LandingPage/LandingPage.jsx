@@ -110,7 +110,7 @@ return(
       </Grid.Row>
 
       <Grid.Row>
-        <Grid.Column style={{maxWidth: 1300}}>
+        <Grid.Column style={{maxWidth: 1600}}>
         <PostGallery
             posts={posts}
             numPhotosCol={1}

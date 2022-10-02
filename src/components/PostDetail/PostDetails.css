@@ -1,0 +1,20 @@
+
+.detailbody{
+    
+  font-family: 'Roboto Mono', monospace;
+  height: 1000px;
+  text-align: center;
+  background-image: url('https://imgur.com/ppcJglz.gif');
+  background-repeat: no-repeat, repeat;
+  background-size: cover; 
+
+}
+
+.detailcontainer {
+  padding-top: 5rem;
+  top: 2rem;
+  background-color: rgb(0, 0, 114);
+  height: 200%;
+  flex: autofill;
+  
+}
