@@ -9,6 +9,8 @@ const upload = multer();
 router.post('/', upload.single('photo'), postsCtrl.create);
 router.get('/', postsCtrl.index);
 router.get('/:id', postsCtrl.detail);
+router.delete("/:id", postsCtrl.deletePost);
+
 
 
 
