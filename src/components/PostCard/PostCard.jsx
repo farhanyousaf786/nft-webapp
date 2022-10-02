@@ -95,7 +95,7 @@ function PostCard({
     </th>
     <th>
      
-    <Link style={{paddingLeft: 150, }} to={`/${post._id}`}>Detail</Link>
+    <Link style={{paddingLeft: 240, }} to={`/${post._id}`}>Detail</Link>
     </th>
   </tr>
      </div>

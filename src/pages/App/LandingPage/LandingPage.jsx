@@ -99,6 +99,9 @@ export default function LandingPage({ loggedUser, handleLogout }) {
       }, []) 
     
 return(
+
+  <body class="landingpagebody">
+<div class="landingpagecontainer">
 <Grid centered>
       <Grid.Row>
         <Grid.Column >
@@ -107,8 +110,7 @@ return(
       </Grid.Row>
 
       <Grid.Row>
-        <Grid.Column style={{maxWidth: 1000}}>
-
+        <Grid.Column style={{maxWidth: 1300}}>
         <PostGallery
             posts={posts}
             numPhotosCol={1}
@@ -121,8 +123,11 @@ return(
           />
         </Grid.Column>
       </Grid.Row>
-
       </Grid>
+</div>
+</body>
+
+
 
 )
 

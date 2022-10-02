@@ -1,6 +1,7 @@
 import React from "react";
 import { Card  } from 'semantic-ui-react'
 import PostCard from '../PostCard/PostCard';
+import "./PostGallery.css"
 
 
 export default function PostGallery({ posts,
@@ -28,8 +29,15 @@ export default function PostGallery({ posts,
   })
 
   return (
+
+    <body class="gallerybody">
+
     <Card.Group itemsPerRow={3} stackable>
       {postCards}
     </Card.Group>
+      
+    </body>
+     
+  
   );
 }

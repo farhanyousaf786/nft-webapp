@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+
+.landingpagebody{
+    
+    background-color: rgb(247, 247, 247) ;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    background-image: url('https://imgur.com/2J2DBoB.gif');
+    background-repeat: no-repeat, repeat;
+    background-size: cover; 
+
+  }
+
+
+  .landingpagecontainer {
+    background-color: rgba(11, 11, 169, 0.808);
+  }
