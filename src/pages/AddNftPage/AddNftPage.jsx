@@ -29,7 +29,7 @@ const AddNftPage = () => {
 
 
   return (
-    < AddNft  handleAddPost={handleAddPost}/>
+    <AddNft handleAddPost={handleAddPost}/>
   );
 };
 

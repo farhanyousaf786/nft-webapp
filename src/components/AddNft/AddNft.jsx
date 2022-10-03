@@ -14,10 +14,12 @@ export default function AddNft(props) {
 
 
   function handleChange(e) {
+
     setState({
         ...state,
         [e.target.name]: e.target.value,
     });
+    
   }
 
   function handleFileInput(e) {
@@ -38,9 +40,6 @@ export default function AddNft(props) {
 
   return (
     <center className="addpostpage" style={{padding: 30, }} >
-
-
-
     <div className="addpagecontainer">
         <center style={{padding: 20}}><h1>Add Post</h1></center>
 
@@ -81,10 +80,7 @@ export default function AddNft(props) {
           Post NFT
         </Button>
       </Form>
-
-   
     </div>
-
 </center>
   );
 }

@@ -33,7 +33,6 @@ function handleChange(e) {
 
 async function handleSubmit(e) {
   e.preventDefault();
-
   try {
     await userService.login(state);
     props.handleSignUpOrLogin();

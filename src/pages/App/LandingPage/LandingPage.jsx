@@ -49,9 +49,6 @@ export default function LandingPage({ loggedUser, handleLogout }) {
   }
 
 
-
-
-
   async function addunLike(postId) {
     try {
       const response = await unlikesAPI.createunLike(postId);
@@ -78,11 +75,6 @@ export default function LandingPage({ loggedUser, handleLogout }) {
   }
 
 
-
-
-
-
-    
     async function getPosts(){
     
         try {

@@ -3,9 +3,6 @@
 This web app is to represent your nfts. You can upload you nfts in gif or in simple image. In this web app 
 you can post, delete like and dislike the nfts. You have to signup to use this app.
 
-
-## Screen Shoots will be here!
-
 ### Landing Screen
 ![1st Screen](https://imgur.com/QMeXx3x.png)
 
@@ -23,7 +20,7 @@ you can post, delete like and dislike the nfts. You have to signup to use this a
 [Nft Market - click to launch](https://nftmarketga.herokuapp.com/intro)
 
 
-## Technologies Used
+### Technologies Used
 * HTML
 * CSS + CSS Table
 * MongoDB - Express
@@ -37,6 +34,10 @@ you can post, delete like and dislike the nfts. You have to signup to use this a
 * https://imgur.com/ to save my images
 * CodePen for styling
 
+## Project Planning:
+- [Trello](https://trello.com/b/1NLR1qJR/mvp)
+- [Wireframe](https://whimsical.com/project-5-MZsQLe182PbuEC8Er1gCC7)
+- [ERD](https://whimsical.com/project-5-MZsQLe182PbuEC8Er1gCC7)
 
 ## Icebox - Future plan
 
